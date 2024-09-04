@@ -17,12 +17,6 @@ h1 {
 
 
 .accordion {
-  // width: 800px;
-  // margin: 90px auto;
-  // color: $color2;
-  // background-color: $color3;
-  // padding: 45px 45px;
-
 
   width: 100%; 
   max-width: 800px;  
@@ -78,25 +72,9 @@ hr{
     border: 1px solid $color4;
 }
 
- 
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
-
-  
-  //not working
   .accordion .content {
     position: relative;
     background: color3;
@@ -125,11 +103,6 @@ hr{
     font-size: 30px;
  
   }
-  
-
-
-
-
   
   .label{
     &__index{
@@ -217,11 +190,8 @@ hr{
     }
   
     .box {
-  
       height: 19vh;
     }
   
-    // .box-india {
-    //   width: 100%;
-    // }
+  
   }
