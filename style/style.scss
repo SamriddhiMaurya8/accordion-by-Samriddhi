@@ -36,10 +36,12 @@ h1 {
   &__container{
     // position: relative;
     margin: 10px 10px;
-   
+    // width: 20rem;
+    
     gap: 20%;
-
+    
     .label{
+      font-size: 30px; // Default size
         position: relative;
         padding: 36px 0;
         font-size: 30px;
@@ -52,7 +54,7 @@ h1 {
         position: absolute;
         background-color: $color2;
         color: $color3;
-      
+        font-size: 30px; // Default size
         border-radius: 50%;
         width: 4%;
         text-align: center;
@@ -79,7 +81,7 @@ hr{
     position: relative;
     background: color3;
     height: 0;
-    
+  
     font-size: 20px;
     text-align: justify;
     width: 780px;
@@ -91,8 +93,13 @@ hr{
 
   .accordion__container.active .content {
     height: 100%;
-    transition: all 1s;
-  
+    // transition: all 1s;
+ width: 36rem;
+
+ //one
+ @media screen and (max-width:610px) {
+  width:17rem;
+ }
   }
   
 
@@ -122,6 +129,7 @@ hr{
         display: block !important;
         justify-content: space-around;
         padding: 7px;
+        
 
 
 
@@ -147,8 +155,8 @@ hr{
         @media (max-width:600px){
           height: 30vh;
         }
-        @media (max-width:550px){
-          height: 30vh;
+        @media (max-width:590px){
+          height: 17vh;
         }
         @media  (max-width:450px) {
           height: 15vh;
@@ -163,6 +171,7 @@ hr{
 
 
   .box-india{
+    // background: #d47070;
     width: 22%;
     @media screen and (max-width:450px) {
       width: 50%;
@@ -194,4 +203,39 @@ hr{
     }
   
   
+  }
+
+
+
+
+
+
+  @media screen and (max-width: 700px) {
+    .accordion__container .label {
+      font-size: 25px; 
+      &::before {
+        font-size: 25px;
+        right: -4px; 
+      }
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .accordion__container .label {
+      font-size: 22px;
+      &::before {
+        font-size: 22px;
+        right: -3px; 
+      }
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .accordion__container .label {
+      font-size: 18px;
+      &::before {
+        font-size: 18px;
+        right: -2px; 
+      }
+    }
   }
