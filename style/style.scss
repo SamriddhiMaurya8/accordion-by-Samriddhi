@@ -17,14 +17,30 @@ h1 {
 
 
 .accordion {
-  width: 800px;
-  margin: 90px auto;
-  color: $color2;
-  background-color: $color3;
-  padding: 45px 45px;
+  // width: 800px;
+  // margin: 90px auto;
+  // color: $color2;
+  // background-color: $color3;
+  // padding: 45px 45px;
 
+
+  width: 100%; 
+  max-width: 800px;  
+  margin: 90px auto;
+  padding: 45px 20px; 
+
+  @media screen and (max-width: 800px) {
+    width: 90%; 
+    margin: 50px auto;
+    padding: 30px 15px;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 95%;
+    padding: 20px 10px;
+  }
   &__container{
-    position: relative;
+    // position: relative;
     margin: 10px 10px;
    
     gap: 20%;
@@ -65,6 +81,16 @@ hr{
  
 
 
+
+
+
+
+
+
+
+
+
+
 }
 
 
@@ -75,10 +101,10 @@ hr{
     position: relative;
     background: color3;
     height: 0;
-    margin-left: 7%;
+    
     font-size: 20px;
     text-align: justify;
-    width: 50 rem;
+    width: 780px;
     overflow: hidden;
     
   }
@@ -118,7 +144,7 @@ hr{
         display: flex;
         flex-direction: column;
         
-        height:17vh;
+        height:20vh;
         border: 1px solid $color2;
         display: block !important;
         justify-content: space-around;
@@ -132,17 +158,43 @@ hr{
             font-weight: 700;
             font-size:1.4rem;
 
+
+            @media screen and (max-width:450px) {
+              font-size: 20px;
+            }
         }
         &__link{
             color: $color4;
+
+            @media screen and (max-width:450px) {
+              font-size: 17px;
+            }
         }
+
+        @media (max-width:600px){
+          height: 30vh;
+        }
+        @media (max-width:550px){
+          height: 30vh;
+        }
+        @media  (max-width:450px) {
+          height: 15vh;
+        }
+
     }
+
+
+
   }
 
 
 
   .box-india{
-    width: 8rem;
+    width: 22%;
+    @media screen and (max-width:450px) {
+      width: 50%;
+      height: 30%;
+    }
   }
   .content-two{
     display: grid;
@@ -157,7 +209,7 @@ hr{
 
   @media screen and (max-width: 600px) {
     .accordion {
-      width: 100%;
+      width: 80%;
     }
   
     .accordion .content {
@@ -165,10 +217,11 @@ hr{
     }
   
     .box {
-      height: auto; 
+  
+      height: 19vh;
     }
   
-    .box-india {
-      width: 100%;
-    }
+    // .box-india {
+    //   width: 100%;
+    // }
   }
