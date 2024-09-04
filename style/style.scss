@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
 @import '_variables';
 
 body {
@@ -7,7 +7,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
  
@@ -22,9 +21,32 @@ h1 {
   color: $color2;
   background-color: $color3;
   padding: 45px 45px;
+
   &__container{
     position: relative;
     margin: 10px 10px;
+
+    .label{
+        position: relative;
+        padding: 10px 0;
+        font-size: 30px;
+        color: $color2;
+        cursor: pointer;
+    }
+    .label::before {
+        content: '+';
+        color: $color2;
+        position: absolute;
+        background-color: $color2;
+        color: $color3;
+        border-radius: 50%;
+        width: 4%;
+        text-align: center;
+        top: 50%;
+        right: -5px;
+        font-size: 30px;
+        transform: translateY(-50%);
+      }
   }
   &.active .content {
     height: 100%;
@@ -40,25 +62,6 @@ hr{
 
 
 
-  
-  
-  .accordion .label {
-    position: relative;
-    padding: 10px 0;
-    font-size: 30px;
-    color: $color2;
-    cursor: pointer;
-  }
-
-  .accordion .label::before {
-    content: '+';
-    color: $color2;
-    position: absolute;
-    top: 50%;
-    right: -5px;
-    font-size: 30px;
-    transform: translateY(-50%);
-  }
   
   
   .accordion .content {
@@ -83,11 +86,7 @@ hr{
     font-size: 30px;
   }
   
-//   .accordion hr {
-//     width: 100;
-//     margin-left: 0;
-//     border: 1px solid $color4;
-//   }
+
 
   .label{
     &__index{
@@ -101,11 +100,16 @@ hr{
     .box{
         display: flex;
         flex-direction: column;
+      
         height:17vh;
         border: 1px solid $color2;
+        display: block !important;
         justify-content: space-around;
-        // width: 10vw;
         padding: 7px;
+
+
+
+
         &__heading{
             color: $color1;
             font-weight: 700;
@@ -113,7 +117,7 @@ hr{
 
         }
         &__link{
-            color: color4;
+            color: $color4;
         }
     }
   }
@@ -127,4 +131,28 @@ hr{
     display: grid;
     grid-template-columns: repeat(3,1fr);
 
+    @media screen and (max-width:600px) {
+        grid-template-columns: repeat(2,0.6fr);
+
+    }
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .accordion {
+      width: 100%;
+    }
+  
+    .accordion .content {
+      width: 100%;
+    }
+  
+    .box {
+      height: auto; 
+
+    }
+  
+    .box-india {
+      width: 100%;
+    }
   }
