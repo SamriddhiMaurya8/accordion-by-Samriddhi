@@ -37,6 +37,7 @@ function handleClick() {
 
   if (!isActive) {
     this.classList.add('active');
+
     this.nextElementSibling.classList.add('show');
   }
 }
